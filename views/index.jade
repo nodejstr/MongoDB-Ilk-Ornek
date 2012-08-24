@@ -1,0 +1,32 @@
+h4 Yeni Yazı Giriniz
+    form(action="/create", method="post", enctype="multipart/form-data")
+        p  Başlık:
+        p	
+            input(type="text", name="baslik")
+        p İçerik:
+        p
+            textarea(name="icerik",cols="17",rows="5")
+            br
+            input(type="submit", value="Gönder")
+
+
+table
+    thead
+        tr: th Yazılar
+    -each post in data
+        tr 
+            td
+                br
+                strong ID  
+                text=post.id
+                br
+                strong Başlık  
+                text=post.baslik
+                br
+                strong  İçerik 
+                text=post.icerik
+                br
+                strong  Tarih 
+                text=post.created_at
+                br
+                br
