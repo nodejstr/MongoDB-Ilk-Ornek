@@ -2,7 +2,6 @@ var Db = require('mongodb').Db,
 Connection = require('mongodb').Connection,
 Server = require('mongodb').Server,
 BSON = require('mongodb').BSON,
-GridStore = require('mongodb').GridStore,
 ObjectID = require('mongodb').ObjectID;
 
 DB = function(host, port) {
